@@ -1,0 +1,150 @@
+// WHILE LOOP //
+
+const cards = ['diamond', 'spade', 'heart', 'club'];
+
+// Write your code below
+let currentCard = null
+
+while (currentCard != 'spade') {
+  currentCard = cards[Math.floor(Math.random() * 4)]
+  console.log(currentCard)
+}
+
+//END//
+
+//PROJECTS
+
+=== MAGIC 8 BALL ===
+
+let userName = 'Archie'
+
+userName ? console.log(`Hello, ${userName}!`) : console.log('Hello')
+
+userQuestion = 'Am I going to eat that sourpatch kid under the sofa???'
+
+console.log(userQuestion)
+
+let randomNumber = Math.floor(Math.random() * 8)
+
+let eightBall = ''
+
+  switch (randomNumber) {
+    case 0:
+      eightBall = 'It is certain';
+      break;
+    case 1:
+      eightBall = 'It is decidedly so';
+      break;
+    case 2:
+      eightBall = 'Reply hazy try again';
+      break;
+    case 3:
+      eightBall = 'Cannot predict now'
+      break;
+    case 4:
+      eightBall = 'Do not count on it'
+      break;
+    case 5:
+      eightBall = 'Do not count on it'
+      break;
+    case 6:
+      eightBall = 'My sources say no'
+      break;
+    case 7:
+      eightBall = 'Outlook not so good'
+      break;
+    case 8:
+      eightBall = 'Signs point to yes'
+      break;
+  }
+
+  console.log(eightBall)
+  
+  
+  === RACE DAY === 
+  
+  let raceNumber = Math.floor(Math.random() * 1000);
+
+let earlyReg = true
+
+let runnerAge = 21
+
+if (runnerAge > 18 && earlyReg === true) {
+  raceNumber += 1000
+} else {
+  raceNumber
+}
+
+if (runnerAge > 18 && earlyReg === true) {
+  console.log(`Number ${raceNumber} will race at 9:30am`)
+} else if ( runnerAge > 18 && earlyReg === false) {
+  console.log (`Number ${raceNumber} will race at 11:00am`)
+} else if (runnerAge === 18 && earlyReg === true) {
+  console.log(`Please see registration desk`)
+} else {
+console.log(`Number ${raceNumber}, the youth race begins at 12:30pm`)
+}
+
+
+=== ROCK PAPER SCISSORS ===
+
+const getUserChoice = userInput => {
+userInput = userInput.toLowerCase();
+
+if (userInput === 'rock'|| userInput === 'paper' || userInput === 'scissors') {
+  return userInput;
+} else {
+  console.log('Error: Incorrect Input')
+}
+}
+
+const getComputerChoice = () => {
+const randomNumber = Math.floor(Math.random() * 3);
+switch (randomNumber) {
+  case 0:
+    return 'rock';
+  case 1:
+    return 'paper';
+  case 2:
+    return 'scissors'; 
+    }
+};
+
+
+const determineWinner = (userChoice, computerChoice) => {
+  if (userChoice === computerChoice) {
+ return 'YOU TIE.';
+} if (userChoice === 'rock') {
+      if (computerChoice === 'paper') { 
+        return 'COMPUTER WINS.'
+    } else {
+      return 'YOU WIN!'
+    }  
+} if (userChoice === 'paper') {
+      if (computerChoice === 'scissors') {
+        return 'COMPUTER WINS.' 
+    } else {
+      return 'YOU WIN!'
+    }
+} if (userChoice === 'scissors') {
+      if (computerChoice === 'rock') {
+        return 'COMPUTER WINS.' 
+    } else {
+      return 'YOU WIN!'
+    }
+}
+}
+
+const playGame = () => {
+  const userChoice = getUserChoice('ROCK');
+  const computerChoice = getComputerChoice();
+  console.log(`You threw: ${userChoice}`)
+  console.log(`Computer threw: ${computerChoice}`)
+  
+  console.log(determineWinner(userChoice, computerChoice))
+}
+
+playGame()
+
+console.log
+
